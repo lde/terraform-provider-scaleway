@@ -994,6 +994,18 @@ func resourceScalewayInstanceServerDelete(ctx context.Context, d *schema.Resourc
 			log.Print("[WARN] Failed remove server from instance group")
 		}
 	}
+	// Remove instance from security group even if it can't be stopped
+	if _, ok := d.GetOk("security_group_id"); ok {
+		_, err := instanceAPI.UpdateServer(&instance.UpdateServerRequest{
+			Zone:          zone,
+			SecurityGroup: &instance.SecurityGroupTemplate{},
+			ServerID:      ID,
+		})
+		if err != nil {
+			log.Print("[WARN] Failed remove server from instance group")
+		}
+	}
+
 	// reach stopped state
 	err = reachState(ctx, instanceAPI, zone, ID, instance.ServerStateStopped)
 	if is404Error(err) {
