@@ -1,7 +1,7 @@
 module github.com/scaleway/terraform-provider-scaleway
 
 require (
-	github.com/aws/aws-sdk-go v1.42.22
+	github.com/aws/aws-sdk-go v1.44.178
 	github.com/dnaeon/go-vcr v1.2.0
 	github.com/dustin/go-humanize v1.0.0
 	github.com/google/go-cmp v0.5.6
@@ -52,12 +52,10 @@ require (
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/vmihailenco/msgpack v4.0.4+incompatible // indirect
 	github.com/zclconf/go-cty v1.9.1 // indirect
-	golang.org/x/crypto v0.0.0-20210616213533-5ff15b29337e // indirect
-	golang.org/x/mod v0.5.1 // indirect
-	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
-	golang.org/x/sys v0.0.0-20211124211545-fe61309f8881 // indirect
-	golang.org/x/text v0.3.6 // indirect
-	golang.org/x/tools v0.1.7 // indirect
+	golang.org/x/crypto v0.0.0-20210921155107-089bfa567519 // indirect
+	golang.org/x/net v0.1.0 // indirect
+	golang.org/x/sys v0.1.0 // indirect
+	golang.org/x/text v0.4.0 // indirect
 	google.golang.org/appengine v1.6.6 // indirect
 	google.golang.org/genproto v0.0.0-20200711021454-869866162049 // indirect
 	google.golang.org/grpc v1.32.0 // indirect
